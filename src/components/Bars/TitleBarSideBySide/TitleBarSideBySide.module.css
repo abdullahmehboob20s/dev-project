@@ -1,0 +1,11 @@
+.section {
+  display: flex;
+  align-items: flex-start;
+}
+.section_left {
+  flex: 1;
+  margin-right: 6rem;
+}
+.section_right {
+  flex: 1;
+}

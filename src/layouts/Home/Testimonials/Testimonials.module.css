@@ -1,0 +1,57 @@
+.testimonials {
+  display: flex;
+}
+
+.testimonials_left {
+  flex: 1;
+  margin-right: 6rem;
+}
+
+.testimonials_right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.testimonials_images {
+  display: flex;
+  align-items: center;
+}
+
+.TestimonialImg {
+  width: 131px;
+  height: 131px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+}
+.TestimonialImg > img {
+  width: 100%;
+  height: 100%;
+}
+
+.testimonials_images > :not(:last-child) {
+  margin-right: 1rem;
+}
+
+.featured {
+  position: absolute;
+  top: 70%;
+  left: 60%;
+  width: 50px;
+  height: 50px;
+  background: #caa383;
+  border-radius: 50%;
+  color: white;
+  font-size: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featured > p {
+  height: 100%;
+  margin-top: 8px;
+}

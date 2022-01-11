@@ -1,0 +1,83 @@
+.mission_slider {
+  display: flex;
+  align-items: center;
+}
+
+.mission_slider_left {
+  flex: 1;
+  margin-right: 6rem;
+}
+
+.mission_slider_right {
+  flex: 1;
+  position: relative;
+  width: 551px;
+  height: 491px;
+}
+
+.mission_slider_right::before {
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+  width: 100%;
+  height: 70%;
+  background: url(../../../assets/images/dots.png);
+  background-repeat: no-repeat no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.sliderPoint {
+  color: var(--light-gray);
+  border-bottom: 1px solid #eeeeee;
+  transition: all 0.2s ease;
+}
+.sliderPoint.active {
+  color: var(--light-brown);
+  font-size: var(--fs-42px);
+  font-weight: 700;
+}
+
+.sliderControler {
+  position: absolute;
+  right: -80px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1300px) {
+  .mission_slider_right {
+    width: 511px;
+    height: 451px;
+  }
+
+  .sliderControler {
+    right: 0%;
+    top: 110%;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  }
+
+  .mission_slider_right::before {
+    left: 50%;
+    top: 50%;
+    bottom: unset;
+    width: 110%;
+    height: 110%;
+    transform: translate(-50%, -50%);
+  }
+
+  .mission_slider {
+    margin-bottom: 200px;
+    margin-top: 100px;
+  }
+}

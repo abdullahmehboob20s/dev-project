@@ -1,0 +1,38 @@
+.navbarWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.navbarRight {
+  display: flex;
+  align-items: center;
+}
+
+.navbarRight > :not(:last-child) {
+  margin-right: 3rem;
+}
+
+.navbarLink {
+  transition: all 0.2s ease;
+  border-bottom: 2px solid transparent;
+}
+.navbarLink.active {
+  color: var(--brown);
+  font-weight: bold;
+  border-bottom: 2px solid var(--brown);
+}
+
+@media (max-width: 1200px) {
+  .navbarRight > :not(:last-child) {
+    margin-right: 2rem;
+  }
+}

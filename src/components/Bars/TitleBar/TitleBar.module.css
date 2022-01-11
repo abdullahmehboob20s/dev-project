@@ -1,0 +1,26 @@
+.titlebar {
+  display: flex;
+  align-items: center;
+}
+
+.titlebar.center {
+  justify-content: center;
+}
+
+.titlebar.bothLines::before,
+.titlebar.leftLine::before {
+  content: "";
+  width: 60px;
+  height: 5px;
+  background: #c4c4c4;
+  margin: 0 10px;
+}
+
+.titlebar.bothLines::after,
+.titlebar.rightLine::after {
+  content: "";
+  width: 60px;
+  height: 5px;
+  background: #c4c4c4;
+  margin: 0 10px;
+}

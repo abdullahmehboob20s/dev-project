@@ -1,0 +1,24 @@
+.footerWrapper {
+  background: #f6f6f6;
+}
+
+.footer {
+  padding: 70px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.footer > :last-child {
+  text-align: right;
+}
+
+.languages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.languages > :not(:last-child) {
+  margin-right: 1rem;
+}

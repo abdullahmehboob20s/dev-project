@@ -1,0 +1,23 @@
+.teamWrapper {
+  position: relative;
+  background: #f9f9f9;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+}
+
+.team_left {
+  flex: 1;
+  margin-right: 4rem;
+}
+.team_right {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.team_right img {
+  width: 100%;
+}
