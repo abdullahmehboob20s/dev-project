@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
@@ -11,10 +12,10 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/properties" element={<Properties />} />
+        {/* <Route path="/properties" element={<Properties />} /> */}
         <Route path="/about-us" element={<About />} />
-        <Route path="/investors" element={<Investors />} />
-        <Route path="/contact-us" element={<ContactPage />} />
+        {/* <Route path="/investors" element={<Investors />} /> */}
+        {/* <Route path="/contact-us" element={<ContactPage />} /> */}
       </Routes>
     </Router>
   );
