@@ -56,3 +56,9 @@
     min-height: 400px;
   }
 }
+
+@media (max-width: 1000px) {
+  .card {
+    padding: 35px 25px;
+  }
+}

@@ -2,10 +2,12 @@ import Button from "components/Buttons/Button/Button";
 import React from "react";
 import styles from "./Hero.module.css";
 import city from "assets/images/city.png";
+import pattrenHorizontal from "assets/images/pattren-horizontal.png";
 
 function Hero() {
   return (
     <div className={styles.hero_wrapper}>
+      <img src={pattrenHorizontal} className="pattren-bottom" alt="" />
       <div className={styles.hero}>
         <div className="container-wrapper">
           <div className={styles.heroTitles}>

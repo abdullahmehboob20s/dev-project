@@ -1,0 +1,36 @@
+.button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #caa383 !important;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.button.left::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: #ffecdc;
+  border-radius: 50%;
+  margin-right: -30px;
+  z-index: -1;
+}
+.button.right::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: #ffecdc;
+  border-radius: 50%;
+  margin-left: -30px;
+  z-index: -1;
+}
+
+.button[disabled] {
+  color: #8c8c8c !important;
+}
+
+.button[disabled]::before,
+.button[disabled]::after {
+  background-color: #e8ebf2;
+}

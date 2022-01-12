@@ -14,7 +14,7 @@ function Home() {
   return (
     <div>
       <Navbar />
-      <div className="mb-100px">
+      <div className="mb-150px">
         <Hero />
       </div>
       <div className="mb-150px">

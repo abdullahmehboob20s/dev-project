@@ -1,14 +1,11 @@
 import Button from "components/Buttons/Button/Button";
 import React from "react";
 import styles from "./PropertiesSlider.module.css";
-import {
-  HiOutlineArrowNarrowRight,
-  HiOutlineArrowNarrowLeft,
-} from "react-icons/hi";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
 import SwiperCore, { Navigation } from "swiper";
+import SliderButtons from "components/Buttons/SliderButtons/SliderButtons";
 SwiperCore.use([Navigation]);
 
 function PropertiesSlider({
@@ -56,18 +53,15 @@ function PropertiesSlider({
 
         <p className="fs-18px weight-4 gray mb-40px">{desc}</p>
 
-        <div className="mb-50px">
+        <div className={`mb-50px ${styles.propertySlider_right_btn_wrap}`}>
           <Button title={btnText} to={link} />
         </div>
 
-        <div className={`${styles.propertySliderButtons} propertySlider_btns`}>
-          <button className="pointer" ref={navigationPrevRef}>
-            <HiOutlineArrowNarrowLeft size={40} />
-          </button>
-
-          <button className="pointer" ref={navigationNextRef}>
-            <HiOutlineArrowNarrowRight size={40} />
-          </button>
+        <div className={styles.propertySliderButtons}>
+          <SliderButtons
+            prevRef={navigationPrevRef}
+            nextRef={navigationNextRef}
+          />
         </div>
       </div>
     </div>

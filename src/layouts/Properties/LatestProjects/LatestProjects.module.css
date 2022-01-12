@@ -1,0 +1,22 @@
+.titles {
+  max-width: 1008px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.sliderBtns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sliderBtns > :not(:last-child) {
+  margin-right: 1rem;
+}
+
+@media (max-width: 760px) {
+  .latestProjectCards {
+    padding: 0 1.5rem;
+    padding-bottom: 0 !important;
+  }
+}

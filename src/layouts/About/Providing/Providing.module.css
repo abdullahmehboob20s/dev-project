@@ -1,0 +1,12 @@
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px 50px;
+}
+
+@media (max-width: 800px) {
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

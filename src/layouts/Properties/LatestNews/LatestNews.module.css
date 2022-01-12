@@ -1,0 +1,22 @@
+.titles {
+  max-width: 850px;
+  width: 100%;
+  margin: 0 auto;
+}
+.latestNewsCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.viewAllNews {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 760px) {
+  .latestNewsCards {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+}

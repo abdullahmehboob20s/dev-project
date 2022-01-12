@@ -86,7 +86,7 @@ function Navbar() {
               About Us
             </NavLink>
             <NavLink
-              to="/investor"
+              to="/investors"
               className={({ isActive }) =>
                 `${styles.navbarLink} ${
                   isActive ? styles.active : ""
@@ -95,7 +95,7 @@ function Navbar() {
             >
               Investor
             </NavLink>
-            <Button title="contact us" />
+            <Button title="contact us" to="/contact-us" />
           </div>
         </div>
       </div>

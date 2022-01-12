@@ -56,6 +56,9 @@ body {
   --dark-blue: #263238;
   --light-gray: #c4c4c4;
   --gray: #808080;
+  --dark-blue: #161d2d;
+  --bg-lightest-white: #f9f9f9;
+  --light-black: #1a1a1a;
 }
 
 /* COLORS */
@@ -86,6 +89,15 @@ body {
 
 .sharp-brown {
   color: var(--sharp-brown);
+}
+.bg-dark-blue {
+  background-color: var(--dark-blue);
+}
+.bg-lightest-white {
+  background-color: var(--bg-lightest-white);
+}
+.light-black {
+  color: var(--light-black);
 }
 
 /* FONT-SIZES */
@@ -359,6 +371,9 @@ a {
 .w-fit-content {
   width: fit-content;
 }
+.w-full {
+  width: 100%;
+}
 
 .pointer {
   cursor: pointer;
@@ -462,6 +477,40 @@ li {
   width: 100%;
 }
 
+.mapboxgl-ctrl {
+  display: none !important;
+}
+
+/* PATTRENS STARTS */
+.pattren-top_left {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+}
+.pattren-bottom {
+  position: absolute;
+  top: 100%;
+  right: 0;
+}
+
+.pattren-top-center {
+  position: absolute;
+  top: -40%;
+  left: 50px;
+}
+.pattren-right-bottom {
+  position: absolute;
+  bottom: 0px;
+  right: 50px;
+}
+.pattren-left-top_center {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  transform: translateY(-50%);
+}
+/* PATTRENS ENDS */
+
 @media (max-width: 1300px) {
   .container-wrapper-2 {
     width: 90%;
@@ -487,15 +536,28 @@ li {
     --fs-42px: 30px;
     --fs-32px: 28px;
   }
+
+  .pattren-top_left,
+  .pattren-bottom,
+  .pattren-top-center,
+  .pattren-right-bottom,
+  .pattren-left-top_center {
+    display: none;
+  }
 }
 
 @media (max-width: 600px) {
   :root {
     --fs-74px: 36px;
     --fs-24px: 18px;
+    --fs-32px: 24px;
   }
 
   .mb-100px {
+    margin-bottom: 50px;
+  }
+
+  .mb-70px {
     margin-bottom: 50px;
   }
 }

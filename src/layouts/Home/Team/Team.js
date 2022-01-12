@@ -10,9 +10,12 @@ import teamMember4 from "assets/images/team-member-4.png";
 import teamMember5 from "assets/images/team-member-5.png";
 import teamMember6 from "assets/images/team-member-6.png";
 
+import pattrenVertical from "assets/images/pattren-vertical.png";
+
 function Team() {
   return (
-    <div className={styles.teamWrapper}>
+    <div className={`${styles.teamWrapper} relative`}>
+      <img src={pattrenVertical} className="pattren-top-center" alt="" />
       <div className="container-wrapper-2 py-100px">
         <div className={styles.team}>
           <div className={styles.team_left}>

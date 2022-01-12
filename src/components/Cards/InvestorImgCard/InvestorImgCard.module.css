@@ -1,0 +1,14 @@
+.card {
+  aspect-ratio: 1/1 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #cccccc;
+  box-sizing: border-box;
+  border-radius: 25px;
+}
+
+.card img {
+  max-width: fit-content;
+  width: 80%;
+}
