@@ -5,7 +5,6 @@ import { Link, NavLink } from "react-router-dom";
 import Button from "components/Buttons/Button/Button";
 import { IoClose } from "react-icons/io5";
 import { BiMenu } from "react-icons/bi";
-import { FaStaylinked } from "react-icons/fa";
 
 function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);

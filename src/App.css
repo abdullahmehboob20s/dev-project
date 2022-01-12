@@ -5,6 +5,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 :root {
@@ -46,6 +51,7 @@
   --fs-78px: 78px;
   --fs-80px: 80px;
 
+  --sharp-brown: #c2713e;
   --brown: #976032;
   --light-brown: #caa383;
   --dark-blue: #263238;
@@ -77,6 +83,10 @@
 }
 .gray {
   color: var(--gray);
+}
+
+.sharp-brown {
+  color: var(--sharp-brown);
 }
 
 /* FONT-SIZES */
@@ -330,6 +340,10 @@
   margin: 0 auto;
 }
 
+.flex {
+  display: flex;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -445,7 +459,8 @@ li {
   height: 100%;
 }
 
-.missionSlider .swiper-wrapper {
+.propertySlider img {
+  width: 100%;
 }
 
 @media (max-width: 1300px) {
