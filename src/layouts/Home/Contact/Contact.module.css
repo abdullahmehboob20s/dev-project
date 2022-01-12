@@ -56,3 +56,40 @@
 .contact_social > :not(:last-child) {
   margin-right: 1rem;
 }
+
+@media (max-width: 1000px) {
+  .contact {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact_left {
+    margin-right: 0rem;
+    margin-bottom: 3rem;
+  }
+
+  .contact_right {
+    padding-top: 0rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .contact_form select {
+    grid-column: unset;
+  }
+
+  .contact_form textarea {
+    grid-column: unset;
+  }
+
+  .contact_form {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact_form button {
+    width: 100%;
+  }
+}

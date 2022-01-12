@@ -3,10 +3,33 @@ import styles from "./Navbar.module.css";
 import logo from "assets/images/logo.png";
 import { Link, NavLink } from "react-router-dom";
 import Button from "components/Buttons/Button/Button";
+import { IoClose } from "react-icons/io5";
+import { BiMenu } from "react-icons/bi";
+import { FaStaylinked } from "react-icons/fa";
 
 function Navbar() {
+  const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
+  const [isScrolled, setIsScrolled] = React.useState(false);
+
+  React.useEffect(() => {
+    const handler = (e) => {
+      if (window.scrollY > 100) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    document.addEventListener("scroll", handler);
+    return () => {
+      document.removeEventListener("scroll", handler);
+    };
+  });
+
   return (
-    <div className={styles.navbarWrapper}>
+    <div
+      className={`${styles.navbarWrapper} ${isScrolled ? styles.scrolled : ""}`}
+    >
       <div className="container-wrapper">
         <div className={styles.navbar}>
           <div className={styles.navbarLeft}>
@@ -14,7 +37,24 @@ function Navbar() {
               <img src={logo} className={styles.navbarBrand} alt="" />
             </Link>
           </div>
-          <div className={styles.navbarRight}>
+
+          <button
+            className={`${styles.navbarMenu} pointer black`}
+            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+          >
+            <BiMenu size={35} />
+          </button>
+          <div
+            className={`${styles.navbarRight} ${
+              isSidebarOpen ? styles.open : ""
+            }`}
+          >
+            <button
+              className={` ${styles.sidebarClose} black pointer`}
+              onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+            >
+              <IoClose size={30} />
+            </button>
             <NavLink
               to="/"
               className={({ isActive }) =>

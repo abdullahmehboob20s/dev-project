@@ -8,14 +8,23 @@ import {
   FaYoutube,
   FaLinkedinIn,
 } from "react-icons/fa";
+import useMediaQuery from "utils/hooks/useMediaQuery ";
 
 function Contact() {
+  const isBellow = useMediaQuery("(max-width: 700px)");
+
   return (
     <div className="container-wrapper-2">
       <div className={styles.contact}>
         <div className={styles.contact_left}>
-          <TitleBar title="CONTACT" isCenter={false} />
-          <p className="fs-38px light-brown weight-6 mb-50px">Get in touch</p>
+          <TitleBar title="CONTACT" isCenter={isBellow ? true : false} />
+          <p
+            className={`fs-38px light-brown weight-6 mb-50px ${
+              isBellow ? "text-center" : ""
+            }`}
+          >
+            Get in touch
+          </p>
 
           <form className={styles.contact_form}>
             <input

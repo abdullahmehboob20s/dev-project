@@ -21,3 +21,21 @@
 .team_right img {
   width: 100%;
 }
+
+@media (max-width: 1000px) {
+  .team {
+    align-items: unset;
+    flex-direction: column;
+  }
+
+  .team_left {
+    flex: 1;
+    margin-right: 0rem;
+    margin-bottom: 3rem;
+  }
+  .team_right {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

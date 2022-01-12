@@ -9,3 +9,17 @@
 .section_right {
   flex: 1;
 }
+
+@media (max-width: 850px) {
+  .section {
+    flex-direction: column;
+  }
+
+  .section_left {
+    flex: 1;
+    margin-right: 0rem;
+    margin-bottom: 1rem;
+
+    width: 100%;
+  }
+}

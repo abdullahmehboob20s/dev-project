@@ -445,6 +445,9 @@ li {
   height: 100%;
 }
 
+.missionSlider .swiper-wrapper {
+}
+
 @media (max-width: 1300px) {
   .container-wrapper-2 {
     width: 90%;
@@ -458,5 +461,27 @@ li {
   .mission-slidrepagination > :not(:last-child) {
     margin-bottom: 0rem;
     margin-right: 1rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  :root {
+    --fs-74px: 54px;
+    --fs-24px: 20px;
+    --fs-38px: 30px;
+    --fs-18px: 16px;
+    --fs-42px: 30px;
+    --fs-32px: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --fs-74px: 36px;
+    --fs-24px: 18px;
+  }
+
+  .mb-100px {
+    margin-bottom: 50px;
   }
 }

@@ -40,8 +40,33 @@
   margin-right: 20px;
 }
 
+.hero_title_img {
+  display: none;
+  width: 100%;
+}
+
 @media (max-width: 1500px) {
   .hero_wrapper::before {
     right: -45%;
+  }
+}
+
+@media (max-width: 500px) {
+  .herobtns {
+    align-items: unset;
+    flex-direction: column;
+  }
+  .herobtns > :not(:last-child) {
+    margin-right: 0px;
+    margin-bottom: 1rem;
+  }
+
+  .hero_title_img {
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero_wrapper::before {
+    display: none;
   }
 }

@@ -13,6 +13,8 @@
   position: relative;
   width: 551px;
   height: 491px;
+  z-index: 10;
+  box-shadow: 0px 5px 20px rgba(171, 171, 171, 0.9) !important;
 }
 
 .mission_slider_right::before {
@@ -79,5 +81,82 @@
   .mission_slider {
     margin-bottom: 200px;
     margin-top: 100px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .mission_slider_right {
+    flex: 1;
+    width: 400px;
+    height: 400px;
+  }
+
+  .mission_slider {
+    margin-bottom: 150px;
+    margin-top: 80px;
+  }
+
+  .sliderControler > button:nth-child(1) {
+    transform: rotate(-90deg);
+  }
+  .sliderControler > button:last-child {
+    transform: rotate(-90deg);
+  }
+}
+
+@media (max-width: 850px) {
+  .mission_slider {
+    display: flex;
+    flex-direction: column;
+    align-items: unset;
+  }
+
+  .mission_slider_left {
+    flex: 1;
+    margin-right: 0rem;
+    margin-bottom: 3rem;
+  }
+
+  .mission_slider_right {
+    flex: 1;
+    width: 100%;
+    height: auto;
+  }
+
+  .mission_slider {
+    margin-top: 30px;
+    margin-bottom: 220px;
+  }
+}
+
+@media (max-width: 700px) {
+  .mission_slider_left {
+    display: flex;
+    overflow-x: scroll;
+    align-items: center;
+    scroll-behavior: smooth;
+  }
+
+  .mission_slider_left::-webkit-scrollbar {
+    height: 0;
+  }
+
+  .mission_slider_left p {
+    min-width: fit-content;
+  }
+
+  .mission_slider_left > :not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  .sliderPoint.active {
+    font-size: var(--fs-24px);
+  }
+}
+
+@media (max-width: 500px) {
+  .mission_slider {
+    margin-top: 30px;
+    margin-bottom: 160px;
   }
 }

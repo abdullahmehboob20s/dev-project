@@ -45,3 +45,14 @@
 .cardLink > :last-child {
   margin-left: 0.5rem;
 }
+
+@media (max-width: 1000px) {
+  .card {
+    min-height: 500px;
+  }
+}
+@media (max-width: 700px) {
+  .card {
+    min-height: 400px;
+  }
+}

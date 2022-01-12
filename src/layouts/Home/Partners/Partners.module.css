@@ -8,3 +8,33 @@
 .partners > :not(:last-child) {
   margin-right: 1rem;
 }
+
+@media (max-width: 1000px) {
+  .partners {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 2fr));
+    justify-items: center;
+    gap: 2rem 1.5rem;
+  }
+  .partners > :not(:last-child) {
+    margin-right: 0rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .partners {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    gap: 0;
+  }
+
+  .partners::-webkit-scrollbar {
+    height: 0;
+  }
+
+  .partners > :not(:last-child) {
+    margin-right: 3rem;
+  }
+}

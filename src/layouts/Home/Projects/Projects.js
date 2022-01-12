@@ -6,16 +6,25 @@ import projectImg1 from "assets/images/project-img-1.png";
 import projectImg2 from "assets/images/project-img-2.png";
 import projectImg3 from "assets/images/project-img-3.png";
 import projectImg4 from "assets/images/project-img-4.png";
+import useMediaQuery from "utils/hooks/useMediaQuery ";
 
 function Projects() {
+  const isBellowSeven100 = useMediaQuery("(max-width: 700px)");
+
   return (
     <div>
-      <div className="mb-70px">
-        <div className="container-wrapper-2">
+      <div className={isBellowSeven100 ? "mb-20px" : `mb-70px`}>
+        <div className="container-wrapper-2 ">
           <TitleBarSideBySide
+            isCenter={isBellowSeven100 ? true : ""}
+            variantNumber={isBellowSeven100 ? 0 : 2}
             tag="Latest Works"
             title="Our Recent Complete the Projects"
-            desc="For each project we establish relationships with partners who we know will help us create added value for your project. As well as bringing together the public and private sectors, we make sector-overarching links to gather knowledge."
+            desc={
+              isBellowSeven100
+                ? ""
+                : `For each project we establish relationships with partners who we know will help us create added value for your project. As well as bringing together the public and private sectors, we make sector-overarching links to gather knowledge.`
+            }
           />
         </div>
       </div>

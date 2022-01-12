@@ -7,6 +7,7 @@ import missionImg3 from "assets/images/mission-img-3.png";
 import missionImg4 from "assets/images/mission-img-4.png";
 import missionImg5 from "assets/images/mission-img-5.png";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
+import useMediaQuery from "utils/hooks/useMediaQuery ";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
@@ -47,6 +48,17 @@ function Mission() {
   let navigationNextRef = React.useRef(null);
   const [swiperState, setSwiperState] = React.useState(null);
   const [swiperActiveIndex, setSwiperActiveIndex] = React.useState(0);
+  const isBellowThousand = useMediaQuery("(max-width: 1000px)");
+  const bringInViewParentRef = React.useRef(null);
+  const bringInViewRef = React.useRef(null);
+
+  React.useEffect(() => {
+    bringInViewParentRef.current.scrollTo(
+      bringInViewRef?.current?.offsetLeft -
+        bringInViewRef?.current?.clientWidth,
+      0
+    );
+  });
 
   return (
     <div className="container-wrapper-2">
@@ -59,9 +71,10 @@ function Mission() {
       </div>
 
       <div className={styles.mission_slider}>
-        <div className={styles.mission_slider_left}>
+        <div className={styles.mission_slider_left} ref={bringInViewParentRef}>
           {sliderData.map((data, index) => (
             <p
+              ref={swiperActiveIndex === index ? bringInViewRef : null}
               className={`${styles.sliderPoint} ${
                 swiperActiveIndex === index ? styles.active : ""
               } pointer fs-24px uppercase weight-4 mb-20px`}
@@ -83,7 +96,7 @@ function Mission() {
           </div>
 
           <Swiper
-            direction={"vertical"}
+            direction={isBellowThousand ? "horizontal" : "vertical"}
             slidesPerView={1}
             className="missionSlider"
             onSlideChange={(swiper) => setSwiperActiveIndex(swiper.activeIndex)}
