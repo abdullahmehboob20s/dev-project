@@ -27,12 +27,12 @@
 }
 
 .navbarBrand {
-  width: 171px;
+  width: 60px;
   transition: all 0.3s ease;
 }
 
 .navbarWrapper.scrolled .navbarBrand {
-  width: 120px;
+  width: 50px;
 }
 
 .navbarLink {
@@ -100,16 +100,16 @@
 
 @media (max-width: 500px) {
   .navbarBrand {
-    width: 86px;
+    width: 40px;
     transition: all 0.3s ease;
   }
 
   .navbarWrapper.scrolled .navbarBrand {
-    width: 86px;
+    width: 30px;
   }
 
   .navbar {
-    padding: 1.5rem 0;
+    padding: 0.5rem 0;
     transition: all 0.3s ease;
   }
 

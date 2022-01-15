@@ -7,7 +7,7 @@ function Footer() {
     <div className={styles.footerWrapper}>
       <div className="container-wrapper">
         <div className={styles.footer}>
-          <img src={logo} alt="" />
+          <img src={logo} className={styles.brandLogo} alt="" />
 
           <div className={styles.languages}>
             <p className="fs-18px weight-7 light-brown">EN</p>

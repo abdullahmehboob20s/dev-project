@@ -13,6 +13,10 @@
   text-align: right;
 }
 
+.brandLogo {
+  width: 100px;
+}
+
 .languages {
   display: flex;
   align-items: center;
@@ -37,5 +41,9 @@
   }
   .languages {
     justify-content: end;
+  }
+
+  .brandLogo {
+    width: 70px;
   }
 }
