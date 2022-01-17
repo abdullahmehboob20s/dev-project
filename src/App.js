@@ -6,10 +6,12 @@ import Properties from "pages/Properties/Properties";
 import About from "pages/About/About";
 import Investors from "pages/Investors/Investors";
 import ContactPage from "pages/ContactPage/ContactPage";
+import ScrollToTop from "components/ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/properties" element={<Properties />} />
